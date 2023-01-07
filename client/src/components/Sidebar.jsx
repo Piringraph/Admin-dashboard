@@ -39,7 +39,7 @@ function Sidebar = ({
     setIsSidebarOpen,
     isNonMobile,
 }) => {
-    const { pathname } = useLocation;
+    const { pathname } = useLocation();
     return (
     <div>Sidebar</div>
   )
