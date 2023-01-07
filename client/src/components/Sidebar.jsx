@@ -33,13 +33,22 @@ import { useLocation, useNavigate } from "react-router-dom";
 import FlexBetween from "./FlexBetween";
 import profileImage from "assets/p7.jpeg";
 
-function Sidebar = ({
+const Sidebar = ({
+    user,
     drawerWidth,
     isSidebarOpen,
     setIsSidebarOpen,
     isNonMobile,
 }) => {
     const { pathname } = useLocation();
+    const [active, setActive]= useState("");
+    const navigate = useNavigate();
+    const theme = useTheme();
+
+    useEffect(() => {
+      setActive(pathname.substring(1));
+    }, [pathname]);
+
     return (
     <div>Sidebar</div>
   )
