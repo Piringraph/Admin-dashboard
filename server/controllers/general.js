@@ -39,7 +39,7 @@ export const getDashboardStats = async ( req, res) => {
     const thisMonthStats = overallStat[0].monthlyData.find(({ month }) => {
       return month === currentMonth;
     });
-    const todayStats = overallStat[0].monthlyData.find(({ month }) => {
+    const todayStats = overallStat[0].monthlyData.find(({ date }) => {
       return date === currentDay;
     });
 
