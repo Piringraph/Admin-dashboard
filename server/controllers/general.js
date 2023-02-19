@@ -13,7 +13,7 @@ export const getUser = async (req, res) => {
   }
 }
 
-export const getDashboardStats = async ( req, res) => {
+export const getDashboardStats = async (req, res) => {
   try {
     // hardcoded values
     const currentMonth = "November";
